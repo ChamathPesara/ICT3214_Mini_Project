@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="c_bg_top">#FFF3E0</color>
+        <color name="c_bg_bottom">#FFE0B2</color>
+
+        <color name="c_primary">#FF6F00</color>
+        <color name="c_primary_dark">#E65100</color>
+        <color name="c_secondary">#7C4DFF</color>
+
+        <color name="c_text">#1F2937</color>
+        <color name="c_hint">#6B7280</color>
+        <color name="c_white">#FFFFFF</color>
+
+        <color name="c_card">#FFFFFF</color>
+</resources>

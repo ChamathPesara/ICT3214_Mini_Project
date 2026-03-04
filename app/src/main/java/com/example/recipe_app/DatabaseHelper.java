@@ -28,6 +28,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COL_EMAIL + " TEXT UNIQUE, " +
                 COL_PASSWORD + " TEXT)";
         db.execSQL(createTable);
+        String createRecipes = "CREATE TABLE recipes (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name TEXT, " +
+                "ingredients TEXT, " +
+                "instructions TEXT, " +
+                "image_uri TEXT, " +   // since you added image
+                "user_email TEXT, " +
+                "FOREIGN KEY(user_email) REFERENCES " + TABLE_USERS + "(" + COL_EMAIL + ") ON DELETE CASCADE)";
+
+        db.execSQL(createRecipes);
     }
 
     @Override
@@ -71,5 +81,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         boolean exists = cursor.getCount() > 0;
         cursor.close();
         return exists;
+    }
+
+    public String getNameByEmail(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("SELECT name FROM " + TABLE_USERS + " WHERE email=?", new String[]{email});
+
+        if (cursor.moveToFirst()) {
+            String name = cursor.getString(0);
+            cursor.close();
+            return name;
+        }
+
+        cursor.close();
+        return "";
+    }
+    public boolean insertRecipe(String name, String ingredients, String instructions, String userEmail) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        values.put("name", name);
+        values.put("ingredients", ingredients);
+        values.put("instructions", instructions);
+        values.put("user_email", userEmail);
+
+        long result = db.insert("recipes", null, values);
+
+        return result != -1;
     }
 }

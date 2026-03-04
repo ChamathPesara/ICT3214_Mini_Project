@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <!-- Icon -->
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/bg_card"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:text="🍲"
+            android:textSize="38sp" />
+
+        <!-- Title (change text dynamically for update mode) -->
+        <TextView
+            android:id="@+id/tvPageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Add Recipe"
+            android:textColor="@color/c_text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="24dp"
+            android:text="Fill in the recipe details"
+            android:textColor="@color/c_hint"
+            android:textSize="14sp" />
+
+        <!-- Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:elevation="8dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Recipe Name -->
+            <EditText
+                android:id="@+id/etRecipeName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:hint="Recipe Name"
+                android:padding="8dp"
+                android:textColor="@color/c_text"
+                android:textColorHint="@color/c_hint" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <!-- Ingredients -->
+            <EditText
+                android:id="@+id/etIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Ingredients (one per line)"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textColor="@color/c_text"
+                android:textColorHint="@color/c_hint" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <!-- Instructions -->
+            <EditText
+                android:id="@+id/etInstructions"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="Instructions (step by step)"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:textColor="@color/c_text"
+                android:textColorHint="@color/c_hint" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Image Preview -->
+            <ImageView
+                android:id="@+id/imgRecipe"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_card"
+                android:contentDescription="Recipe Image"
+                android:scaleType="centerCrop" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <!-- Select Image -->
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_button_outline"
+                android:text="Select Image"
+                android:textAllCaps="false"
+                android:textColor="@color/c_primary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <!-- Save / Update Button -->
+        <Button
+            android:id="@+id/btnSaveRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_button_gradient"
+            android:text="Save Recipe"
+            android:textAllCaps="false"
+            android:textColor="@color/c_white"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_button_outline"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/c_primary"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+</ScrollView>

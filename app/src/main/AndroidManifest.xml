@@ -11,27 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe_App">
-
-        <activity android:name=".Login"
+        <activity
+            android:name=".ViewRecipes"
             android:exported="false" />
-
-        <activity android:name=".Register"
+        <activity
+            android:name=".AddRecipe"
             android:exported="false" />
-
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
+            android:exported="false" />
         <activity
             android:name=".Title"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
     </application>
-
 
 </manifest>

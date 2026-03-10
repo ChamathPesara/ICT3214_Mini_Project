@@ -212,7 +212,7 @@ The app includes the following main screens:
 
 # 👨‍💻 Team Members
 
-| Name           | Role                                                          | Reg No       |
+| Username       | Role                                                          | Reg No       |
 | -------------- | --------------------------------------------------------------| -------------|
 | Chamath Pesara | View Recipes activity, Database Integration, UI modifications | ICT/2022/006 |
 | SKeerthy       | Login and registration activities, Database Integration       | ICT/2022/007 |

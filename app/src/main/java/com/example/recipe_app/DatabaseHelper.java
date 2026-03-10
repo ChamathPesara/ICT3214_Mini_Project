@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "UserDB.db";
     private static final int DATABASE_VERSION = 1;
@@ -33,7 +36,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "name TEXT, " +
                 "ingredients TEXT, " +
                 "instructions TEXT, " +
-                "image_uri TEXT, " +   // since you added image
                 "user_email TEXT, " +
                 "FOREIGN KEY(user_email) REFERENCES " + TABLE_USERS + "(" + COL_EMAIL + ") ON DELETE CASCADE)";
 
@@ -42,6 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS recipes");
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
         onCreate(db);
     }
@@ -97,7 +100,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         return "";
     }
-    public boolean insertRecipe(String name, String ingredients, String instructions, String userEmail) {
+    public boolean insertRecipe(String name, String ingredients, String instructions,String userEmail) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -110,5 +113,77 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         long result = db.insert("recipes", null, values);
 
         return result != -1;
+    }
+
+    public List<Recipe> getUserRecipes(String email) {
+        List<Recipe> list = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM recipes WHERE user_email=?",
+                new String[]{email}
+        );
+
+        if (cursor.moveToFirst()) {
+            do {
+                Recipe recipe = new Recipe(
+                        cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4)
+                );
+                list.add(recipe);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return list;
+    }
+    public void deleteRecipe(int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("recipes", "id=?", new String[]{String.valueOf(id)});
+        db.close();
+    }
+
+    public Recipe getRecipeById(int id) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(
+                "SELECT * FROM recipes WHERE id = ?",
+                new String[]{String.valueOf(id)}
+        );
+
+        if (cursor.moveToFirst()) {
+            Recipe recipe = new Recipe(
+                    cursor.getInt(0),
+                    cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4)
+            );
+
+            cursor.close();
+            return recipe;
+        }
+
+        cursor.close();
+        return null;
+    }
+    public void updateRecipe(int id, String name,
+                             String ingredients,
+                             String instructions) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("name", name);
+        values.put("ingredients", ingredients);
+        values.put("instructions", instructions);
+
+        db.update("recipes", values, "id=?",
+                new String[]{String.valueOf(id)});
     }
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Recipe_App">
         <activity
+            android:name=".Title"
+            android:exported="false" />
+        <activity
             android:name=".ViewRecipes"
             android:exported="false" />
         <activity
@@ -24,7 +27,7 @@
             android:name=".Register"
             android:exported="false" />
         <activity
-            android:name=".Title"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +38,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

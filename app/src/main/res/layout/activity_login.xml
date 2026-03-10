@@ -14,20 +14,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome back!"
-            android:textSize="26sp"
-            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Welcome Back !"
             android:textColor="@color/c_text"
-            android:layout_marginTop="14dp" />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login to continue"
-            android:textSize="14sp"
-            android:textColor="@color/c_hint"
             android:layout_marginTop="6dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/alata"
+            android:text="Login to continue"
+            android:textColor="@color/c_hint"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,6 +47,7 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,6 +65,7 @@
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,9 +78,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:background="@drawable/bg_button_gradient"
+                android:fontFamily="@font/baloo"
                 android:text="Sign In"
                 android:textAllCaps="false"
                 android:textColor="@color/c_white"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Space
@@ -87,10 +93,11 @@
                 android:id="@+id/txtGoRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alata"
                 android:text="Don’t have an account? Create one"
                 android:textColor="@color/c_primary"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

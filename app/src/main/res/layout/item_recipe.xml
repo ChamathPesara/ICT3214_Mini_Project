@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:elevation="8dp"
+    android:background="@drawable/bg_card"
+    app:cardCornerRadius="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/txtRecipeIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="🍲"
+            android:textSize="36sp"
+            android:background="@drawable/bg_card"
+            android:padding="8dp"/>
+
+        <!-- Text + Buttons Container -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <!-- Recipe Name -->
+            <TextView
+                android:id="@+id/txtRecipeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aclonica"
+                android:text="Recipe Name"
+                android:textColor="@color/c_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Optional small preview -->
+            <TextView
+                android:id="@+id/txtPreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/alata"
+                android:maxLines="1"
+                android:text="You can edit this anytime !!!"
+                android:textColor="@color/c_hint"
+                android:textSize="12sp" />
+
+            <!-- Buttons Row -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="end">
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_button_outline"
+                    android:fontFamily="@font/baloo"
+                    android:text="View / Edit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/c_primary"
+                    android:textSize="12sp" />
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_button_gradient"
+                    android:fontFamily="@font/baloo"
+                    android:text="Delete"
+                    android:textAllCaps="false"
+                    android:textColor="@color/c_white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

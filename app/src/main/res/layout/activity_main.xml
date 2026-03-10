@@ -3,7 +3,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient">
+    android:background="@drawable/bg_gradient"
+    android:layoutMode="opticalBounds">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,38 +17,37 @@
             android:layout_width="match_parent"
             android:layout_height="40dp" />
 
-        <!-- App Icon -->
-        <TextView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:background="@drawable/bg_card"
             android:elevation="6dp"
-            android:gravity="center"
-            android:text="🍲"
-            android:textSize="38sp" />
+            android:padding="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/recipe_logo" />
 
-        <!-- Title -->
         <TextView
             android:id="@+id/tvWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
-            android:text="Welcome"
+            android:fontFamily="@font/aclonica"
+            android:text="Welcome !!!"
             android:textColor="@color/c_text"
             android:textSize="26sp"
             android:textStyle="bold" />
 
-        <!-- Subtitle -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="30dp"
+            android:fontFamily="@font/alata"
             android:text="What would you like to do today?"
             android:textColor="@color/c_hint"
             android:textSize="14sp" />
 
-        <!-- Button Card -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -55,30 +55,32 @@
             android:elevation="8dp"
             android:orientation="vertical">
 
-            <!-- Add Recipe -->
             <Button
                 android:id="@+id/btnAddRecipe"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:background="@drawable/bg_button_gradient"
+                android:fontFamily="@font/baloo"
                 android:text="Add Recipe"
                 android:textAllCaps="false"
                 android:textColor="@color/c_white"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="14dp" />
 
-            <!-- View Recipes -->
             <Button
                 android:id="@+id/btnViewRecipes"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:background="@drawable/bg_button_outline"
+                android:fontFamily="@font/baloo"
                 android:text="View Recipes"
                 android:textAllCaps="false"
                 android:textColor="@color/c_primary"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -89,6 +91,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/alata"
             android:text="Happy cooking 🍳"
             android:textColor="@color/c_hint"
             android:textSize="12sp" />

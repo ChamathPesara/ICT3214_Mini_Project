@@ -253,5 +253,3 @@ This project is created for **educational purposes** and academic demonstration.
 ---
 
 ⭐ If you found this project useful or interesting, feel free to give it a star!
-# ICT3214_Mini_Project
-A recipe collection mobile app created using Android Studio

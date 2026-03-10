@@ -14,20 +14,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create account"
-            android:textSize="26sp"
-            android:textStyle="bold"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Create Your Account"
             android:textColor="@color/c_text"
-            android:layout_marginTop="14dp" />
+            android:textSize="26sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Start saving your recipes"
-            android:textSize="14sp"
-            android:textColor="@color/c_hint"
             android:layout_marginTop="6dp"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/alata"
+            android:text="Start saving your recipes"
+            android:textColor="@color/c_hint"
+            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,6 +47,7 @@
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,6 +64,7 @@
                     android:id="@+id/etEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,6 +82,7 @@
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
             <Space
@@ -93,6 +98,7 @@
                     android:id="@+id/etConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/alata"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,11 +110,13 @@
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
+                android:background="@drawable/bg_button_gradient"
+                android:fontFamily="@font/baloo"
                 android:text="Create Account"
                 android:textAllCaps="false"
                 android:textColor="@color/c_white"
-                android:textStyle="bold"
-                android:background="@drawable/bg_button_gradient" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Space
                 android:layout_width="match_parent"
@@ -118,10 +126,11 @@
                 android:id="@+id/txtGoLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/alata"
                 android:text="Already have an account? Login"
                 android:textColor="@color/c_primary"
-                android:textStyle="bold"
-                android:layout_gravity="center" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 

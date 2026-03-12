@@ -199,7 +199,7 @@ git clone https://github.com/ChamathPesara/ICT3214_Mini_Project
 
 # 2) Download the apk file
 
-2.1. Access release 1.0 from tags
+2.1. Access release 1.0 from repository
 
 2.2. Download the My_Cook_Book.apk file
 

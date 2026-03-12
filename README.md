@@ -179,21 +179,31 @@ MyCookBook
 
 # 🚀 How to Run the Project
 
-1. Clone the repository
+# 1) Exporting the repository
+
+1.1. Clone the repository
 
 ```
 git clone https://github.com/ChamathPesara/ICT3214_Mini_Project
 ```
 
-2. Open the project in **Android Studio**
+1.2. Open the project in **Android Studio**
 
-3. Build and run the application using:
+1.3. Build and run the application using:
 
 * Android Emulator
   or
 * Physical Android device
 
-4. Register a new account and start managing your recipes.
+1.4. Register a new account and start managing your recipes.
+
+# 2) Download the apk file
+
+2.1. Access release 1.0 from tags
+
+2.2. Download the My_Cook_Book.apk file
+
+2.3. Install the apk 
 
 ---
 
@@ -220,16 +230,15 @@ The app includes the following main screens:
 
 ---
 
-# 📚 Learning Outcomes
+# 📸 Screenshots of the App 
 
-Through this project we gained practical experience in:
-
-* Android application development
-* Designing mobile user interfaces
-* Working with SQLite databases
-* Implementing CRUD functionality
-* Managing user authentication
-* Using RecyclerView and adapters
+<img width="218" height="419" alt="App_Screenshot_1" src="https://github.com/user-attachments/assets/45c5e93e-5d75-4682-9e64-36fd608f491c" />
+<img width="217" height="414" alt="App_Screenshot_2" src="https://github.com/user-attachments/assets/241fa260-f226-4afb-b50c-e64b4fd50cd4" />
+<img width="214" height="419" alt="App_Screenshot_3" src="https://github.com/user-attachments/assets/ba0259fe-b965-4411-b232-f8b3dbd632ef" />
+<img width="212" height="415" alt="App_Screenshot_4" src="https://github.com/user-attachments/assets/c4cca80e-9f2f-4aef-8259-b7462693b089" />
+<img width="220" height="418" alt="App_Screenshot_5" src="https://github.com/user-attachments/assets/6388be8b-89f6-433f-b341-46d237f42d09" />
+<img width="214" height="418" alt="App_Screenshot_6" src="https://github.com/user-attachments/assets/8370255b-57d5-4a9a-bd19-26a38cefc051" />
+<img width="215" height="418" alt="App_Screenshot_7" src="https://github.com/user-attachments/assets/c49a0028-5f25-4267-be7e-2bbcda964a15" />
 
 ---
 
@@ -238,11 +247,9 @@ Through this project we gained practical experience in:
 Potential enhancements for the application include:
 
 * Adding recipe images
-* Cloud database integration (Firebase)
 * Recipe search functionality
 * Recipe categories (Desserts, Drinks, etc.)
 * Favorite recipes feature
-* Sharing recipes with other users
 
 ---
 
